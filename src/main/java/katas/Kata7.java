@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 /*
-    Goal: Retrieve the id, title, and smallest box art url for every video
+    Goal: Retrieve the id, title, and smallest boxart url for every video
     DataSource: DataUtil.getMovieLists()
     Output: List of ImmutableMap.of("id", "5", "title", "Bad Boys", "boxart": "url)
 */
