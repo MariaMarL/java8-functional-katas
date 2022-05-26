@@ -9,6 +9,7 @@ import util.DataUtil;
 
 import java.util.List;
 import java.util.Map;
+import java.util.function.BinaryOperator;
 
 /*
     Goal: Retrieve the largest rating using reduce()
@@ -19,6 +20,15 @@ public class Kata5 {
     public static Double execute() {
         List<Movie> movies = DataUtil.getMovies();
 
-        return 3.0;
+
+       return movies.stream()
+                .map(Movie::getRating)
+                .reduce(0.0, (a, b) -> Double.max(a, b));
+                };
+
+
+    public static void main(String[] args) {
+        Kata5 kata5 = new Kata5();
+        System.out.println(kata5.execute());
     }
 }
